@@ -1,0 +1,15 @@
+function appendToDisplay(value) {
+    document.getElementById('display').value += value; // إضافة القيمة إلى الشاشة
+}
+
+function clearDisplay() {
+    document.getElementById('display').value = ''; // مسح الشاشة
+}
+
+function calculateResult() {
+    try {
+        document.getElementById('display').value = eval(document.getElementById('display').value); // حساب النتيجة
+    } catch (error) {
+        document.getElementById('display').value = 'خطأ'; // إظهار رسالة خطأ إذا كان هناك خطأ في الحساب
+    }
+}
